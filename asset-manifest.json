@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/iactive_pro/static/css/main.1c4453d3.css",
-    "main.js": "/iactive_pro/static/js/main.0f6b467f.js",
+    "main.js": "/iactive_pro/static/js/main.beea006a.js",
     "static/js/787.0c3f432a.chunk.js": "/iactive_pro/static/js/787.0c3f432a.chunk.js",
     "static/media/profile.jpg": "/iactive_pro/static/media/profile.876e14a9e5f773373bd0.jpg",
     "static/media/img.jpg": "/iactive_pro/static/media/img.a45c9f797523add9ea60.jpg",
     "index.html": "/iactive_pro/index.html",
     "main.1c4453d3.css.map": "/iactive_pro/static/css/main.1c4453d3.css.map",
-    "main.0f6b467f.js.map": "/iactive_pro/static/js/main.0f6b467f.js.map",
+    "main.beea006a.js.map": "/iactive_pro/static/js/main.beea006a.js.map",
     "787.0c3f432a.chunk.js.map": "/iactive_pro/static/js/787.0c3f432a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c4453d3.css",
-    "static/js/main.0f6b467f.js"
+    "static/js/main.beea006a.js"
   ]
 }
