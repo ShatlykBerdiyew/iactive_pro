@@ -35,7 +35,9 @@ function App() {
       redirect: "follow",
     };
 
-    fetch("", requestOptions)
+    // "proxy": "http://f0665380.xsph.ru",
+
+    fetch("http://f0665380.xsph.ru", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.Messages && result.Messages.length > 0) {
@@ -72,19 +74,17 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <button onClick={handleChangeClick}>{addNewPost}</button>
+      <button onClick={handleChangeClick}>{addNewPost}</button>
 
-        {data?.map((item, index) => (
-          <Item
-            data={item}
-            key={index}
-            likedHitory={historyLike}
-            setLikedHistory={setHistoryLike}
-          />
-          // <p key={index}>{item.author}</p>
-        ))}
-      </header>
+      {data?.map((item, index) => (
+        <Item
+          data={item}
+          key={index}
+          likedHitory={historyLike}
+          setLikedHistory={setHistoryLike}
+        />
+        // <p key={index}>{item.author}</p>
+      ))}
     </div>
   );
 }
