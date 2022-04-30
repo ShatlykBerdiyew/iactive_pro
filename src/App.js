@@ -37,7 +37,7 @@ function App() {
 
     // "proxy": "http://f0665380.xsph.ru",
 
-    fetch("http://f0665380.xsph.ru", requestOptions)
+    fetch("", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.Messages && result.Messages.length > 0) {
