@@ -1,6 +1,7 @@
 {
   "name": "test",
   "version": "0.1.0",
+  "proxy": "http://f0665380.xsph.ru",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
