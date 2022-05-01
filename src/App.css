@@ -37,6 +37,10 @@
   }
 } */
 
+.App {
+  width: 100%;
+}
+
 .container {
   max-width: 886px;
   max-height: 700px;
@@ -151,4 +155,15 @@
   color: #808080;
   text-decoration: none;
   margin-left: 10px;
+}
+
+.btnContainer {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+}
+
+.btn {
+  width: 150px;
+  margin: auto;
 }

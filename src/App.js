@@ -22,9 +22,7 @@ function App() {
     }
   }, []);
 
-  console.log(data.length);
-
-  const handleClick = (id) => {
+  const getMessages = (id) => {
     var formdata = new FormData();
     formdata.append("actionName", "MessagesLoad");
     formdata.append("messageId", `${id}`);
@@ -34,8 +32,6 @@ function App() {
       body: formdata,
       redirect: "follow",
     };
-
-    // "proxy": "http://f0665380.xsph.ru",
 
     fetch("", requestOptions)
       .then((response) => response.json())
@@ -52,14 +48,10 @@ function App() {
       })
       .catch((error) => console.log("error", error));
   };
-  console.log("render");
-
-  console.log("dashyndaky lastID: ", lastPostId);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("effectin ichinde:", lastPostId);
-      handleClick(lastPostId);
+      getMessages(lastPostId);
     }, 5000);
     return () => clearInterval(interval);
   });
@@ -74,7 +66,11 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handleChangeClick}>{addNewPost}</button>
+      <div className="btnContainer">
+        <button className="btn" onClick={handleChangeClick}>
+          {addNewPost}
+        </button>
+      </div>
 
       {data?.map((item, index) => (
         <Item
@@ -83,7 +79,6 @@ function App() {
           likedHitory={historyLike}
           setLikedHistory={setHistoryLike}
         />
-        // <p key={index}>{item.author}</p>
       ))}
     </div>
   );

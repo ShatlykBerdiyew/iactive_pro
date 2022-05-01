@@ -80,13 +80,23 @@ const Item = ({ data, likedHitory, setLikedHistory }) => {
         </div>
       </div>
       <div className="content">
-        <p className="time">15:57</p>
+        <p className="time">{data.date.slice(11, 16)}</p>
         <div className="content_text">
           <p>{text === "Далее" ? data.content.slice(0, 200) : data.content}</p>
           {data.content.length > 200 ? (
             <p onClick={() => more()}>{text}</p>
           ) : null}
-          <img src={MainImg} className="main_img" alt="" />
+          {data.attachments.length > 0
+            ? data.attachments.map((elem) => {
+                if (elem.type === "video") {
+                  return (
+                    <video controls loop muted>
+                      <source src={elem.url} type="video/mp4"></source>
+                    </video>
+                  );
+                }
+              })
+            : null}
         </div>
       </div>
       <div className="hashtag">
