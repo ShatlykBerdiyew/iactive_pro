@@ -167,3 +167,8 @@
   width: 150px;
   margin: auto;
 }
+
+.header_icons {
+  display: inline;
+  line-height: 100%;
+}
